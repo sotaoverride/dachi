@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/aatir/capcrunch/build/_deps/zeromq-subbuild/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

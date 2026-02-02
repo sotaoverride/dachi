@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wno-tautological-constant-compare -O3 -DNDEBUG CMakeFiles/local_lat.dir/perf/local_lat.cpp.o -o bin/local_lat  -Wl,-rpath,/home/aatir/capcrunch/build/_deps/zeromq-build/lib: lib/libzmq.so.5.2.5 -lrt

@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG "CMakeFiles/capnp-evolution-tests.dir/compiler/evolution-test.c++.o" -o capnp-evolution-tests  libcapnpc.a libcapnp.a ../kj/libkj.a -lpthread

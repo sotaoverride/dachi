@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/aatir/capcrunch/build/_deps/zeromq-subbuild/CMakeFiles/zeromq-populate"
+		},
+		{
+			"file" : "/home/aatir/capcrunch/build/_deps/zeromq-subbuild/CMakeFiles/zeromq-populate.rule"
+		},
+		{
+			"file" : "/home/aatir/capcrunch/build/_deps/zeromq-subbuild/CMakeFiles/zeromq-populate-complete.rule"
+		},
+		{
+			"file" : "/home/aatir/capcrunch/build/_deps/zeromq-subbuild/zeromq-populate-prefix/src/zeromq-populate-stamp/zeromq-populate-build.rule"
+		},
+		{
+			"file" : "/home/aatir/capcrunch/build/_deps/zeromq-subbuild/zeromq-populate-prefix/src/zeromq-populate-stamp/zeromq-populate-configure.rule"
+		},
+		{
+			"file" : "/home/aatir/capcrunch/build/_deps/zeromq-subbuild/zeromq-populate-prefix/src/zeromq-populate-stamp/zeromq-populate-download.rule"
+		},
+		{
+			"file" : "/home/aatir/capcrunch/build/_deps/zeromq-subbuild/zeromq-populate-prefix/src/zeromq-populate-stamp/zeromq-populate-install.rule"
+		},
+		{
+			"file" : "/home/aatir/capcrunch/build/_deps/zeromq-subbuild/zeromq-populate-prefix/src/zeromq-populate-stamp/zeromq-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/aatir/capcrunch/build/_deps/zeromq-subbuild/zeromq-populate-prefix/src/zeromq-populate-stamp/zeromq-populate-patch.rule"
+		},
+		{
+			"file" : "/home/aatir/capcrunch/build/_deps/zeromq-subbuild/zeromq-populate-prefix/src/zeromq-populate-stamp/zeromq-populate-test.rule"
+		},
+		{
+			"file" : "/home/aatir/capcrunch/build/_deps/zeromq-subbuild/zeromq-populate-prefix/src/zeromq-populate-stamp/zeromq-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"zeromq-populate"
+		],
+		"name" : "zeromq-populate"
+	}
+}

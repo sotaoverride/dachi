@@ -1,0 +1,14 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/aatir/capcrunch/build/cmake_install.cmake",
+		"/home/aatir/capcrunch/build/_deps/zeromq-build/cmake_install.cmake",
+		"/home/aatir/capcrunch/build/_deps/cppzmq-build/cmake_install.cmake",
+		"/home/aatir/capcrunch/build/_deps/capnproto-build/cmake_install.cmake",
+		"/home/aatir/capcrunch/build/_deps/capnproto-build/c++/cmake_install.cmake",
+		"/home/aatir/capcrunch/build/_deps/capnproto-build/c++/src/cmake_install.cmake",
+		"/home/aatir/capcrunch/build/_deps/capnproto-build/c++/src/kj/cmake_install.cmake",
+		"/home/aatir/capcrunch/build/_deps/capnproto-build/c++/src/capnp/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

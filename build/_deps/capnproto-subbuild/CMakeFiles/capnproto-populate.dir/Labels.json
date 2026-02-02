@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/aatir/capcrunch/build/_deps/capnproto-subbuild/CMakeFiles/capnproto-populate"
+		},
+		{
+			"file" : "/home/aatir/capcrunch/build/_deps/capnproto-subbuild/CMakeFiles/capnproto-populate.rule"
+		},
+		{
+			"file" : "/home/aatir/capcrunch/build/_deps/capnproto-subbuild/CMakeFiles/capnproto-populate-complete.rule"
+		},
+		{
+			"file" : "/home/aatir/capcrunch/build/_deps/capnproto-subbuild/capnproto-populate-prefix/src/capnproto-populate-stamp/capnproto-populate-build.rule"
+		},
+		{
+			"file" : "/home/aatir/capcrunch/build/_deps/capnproto-subbuild/capnproto-populate-prefix/src/capnproto-populate-stamp/capnproto-populate-configure.rule"
+		},
+		{
+			"file" : "/home/aatir/capcrunch/build/_deps/capnproto-subbuild/capnproto-populate-prefix/src/capnproto-populate-stamp/capnproto-populate-download.rule"
+		},
+		{
+			"file" : "/home/aatir/capcrunch/build/_deps/capnproto-subbuild/capnproto-populate-prefix/src/capnproto-populate-stamp/capnproto-populate-install.rule"
+		},
+		{
+			"file" : "/home/aatir/capcrunch/build/_deps/capnproto-subbuild/capnproto-populate-prefix/src/capnproto-populate-stamp/capnproto-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/aatir/capcrunch/build/_deps/capnproto-subbuild/capnproto-populate-prefix/src/capnproto-populate-stamp/capnproto-populate-patch.rule"
+		},
+		{
+			"file" : "/home/aatir/capcrunch/build/_deps/capnproto-subbuild/capnproto-populate-prefix/src/capnproto-populate-stamp/capnproto-populate-test.rule"
+		},
+		{
+			"file" : "/home/aatir/capcrunch/build/_deps/capnproto-subbuild/capnproto-populate-prefix/src/capnproto-populate-stamp/capnproto-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"capnproto-populate"
+		],
+		"name" : "capnproto-populate"
+	}
+}

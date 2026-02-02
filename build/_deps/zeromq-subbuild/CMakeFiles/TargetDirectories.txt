@@ -1,0 +1,3 @@
+/home/aatir/capcrunch/build/_deps/zeromq-subbuild/CMakeFiles/zeromq-populate.dir
+/home/aatir/capcrunch/build/_deps/zeromq-subbuild/CMakeFiles/edit_cache.dir
+/home/aatir/capcrunch/build/_deps/zeromq-subbuild/CMakeFiles/rebuild_cache.dir
