@@ -39,9 +39,13 @@ void subscriber_daemon(zmq::context_t* context, std::string addr) {
         zmq::message_t z_msg;
         auto result = sub.recv(z_msg, zmq::recv_flags::none);
         
-        // Ensure data is aligned for Cap'n Proto
-        auto data = reinterpret_cast<const capnp::word*>(z_msg.data());
-        capnp::FlatArrayMessageReader reader(kj::arrayPtr(data, z_msg.size() / sizeof(capnp::word)));
+	// Map ZMQ buffer to Cap'n Proto reader
+        kj::ArrayPtr<const capnp::word> segments(
+            reinterpret_cast<const capnp::word*>(z_msg.data()),
+            z_msg.size() / sizeof(capnp::word)
+        );
+
+        capnp::FlatArrayMessageReader reader(segments);
         auto log = reader.getRoot<HelloWorld>();
 
         std::cout << "[" << addr << "] Recv ID: " << log.getId() 
