@@ -14,7 +14,7 @@ void publisher_daemon(zmq::context_t* context, std::string addr) {
     uint32_t counter = 0;
     while (true) {
         capnp::MallocMessageBuilder builder;
-        auto msg = builder.initRoot<HelloWorld>();
+        HelloWorld::Builder msg = builder.initRoot<HelloWorld>();
         msg.setId(counter++);
         msg.setMessage("Hello from " + addr);
 
@@ -39,13 +39,11 @@ void subscriber_daemon(zmq::context_t* context, std::string addr) {
         zmq::message_t z_msg;
         auto result = sub.recv(z_msg, zmq::recv_flags::none);
         
-	// Map ZMQ buffer to Cap'n Proto reader
-        kj::ArrayPtr<const capnp::word> segments(
-            reinterpret_cast<const capnp::word*>(z_msg.data()),
-            z_msg.size() / sizeof(capnp::word)
-        );
+	size_t wordCount = z_msg.size() / sizeof(capnp::word);
+	auto aligned_buffer = kj::heapArray<capnp::word>(wordCount);
+	memcpy(aligned_buffer.asBytes().begin(), z_msg.data(), z_msg.size());
 
-        capnp::FlatArrayMessageReader reader(segments);
+        capnp::FlatArrayMessageReader reader(aligned_buffer);
         auto log = reader.getRoot<HelloWorld>();
 
         std::cout << "[" << addr << "] Recv ID: " << log.getId() 
