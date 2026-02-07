@@ -10,20 +10,18 @@ int main() {
     subscriber.set(zmq::sockopt::subscribe, "");
 
     while (true) {
-        zmq::message_t zmq_msg;
-        auto res = subscriber.recv(zmq_msg, zmq::recv_flags::none);
+        zmq::message_t z_msg;
+        auto result = subscriber.recv(z_msg, zmq::recv_flags::none);
+        
+	size_t wordCount = z_msg.size() / sizeof(capnp::word);
+	auto aligned_buffer = kj::heapArray<capnp::word>(wordCount);
+	memcpy(aligned_buffer.asBytes().begin(), z_msg.data(), z_msg.size());
 
-        // Map ZMQ buffer to Cap'n Proto reader
-        kj::ArrayPtr<const capnp::word> segments(
-            reinterpret_cast<const capnp::word*>(zmq_msg.data()),
-            zmq_msg.size() / sizeof(capnp::word)
-        );
+        capnp::FlatArrayMessageReader reader(aligned_buffer);
+        auto log = reader.getRoot<HelloWorld>();
 
-        capnp::FlatArrayMessageReader reader(segments);
-        auto hello = reader.getRoot<HelloWorld>();
-
-        std::cout << "Received ID: " << hello.getId() 
-                  << " Message: " << hello.getMessage().cStr() << std::endl;
+        std::cout << "["  << "] Recv ID: " << log.getId() 
+                  << " Text: " << log.getMessage().cStr() << std::endl;
     }
     return 0;
 }

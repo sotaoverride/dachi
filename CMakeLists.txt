@@ -35,10 +35,10 @@ FetchContent_MakeAvailable(CapnProto)
 capnp_generate_cpp(CAPNP_SRCS CAPNP_HDRS schema.capnp)
 
 # Publisher
-add_executable(publisher pub.cpp ${CAPNP_SRCS})
+add_executable(publisher cli.cpp ${CAPNP_SRCS})
 target_link_libraries(publisher PRIVATE CapnProto::capnp-rpc cppzmq "${CMAKE_CURRENT_BINARY_DIR}")
 target_include_directories(publisher PRIVATE "${CMAKE_CURRENT_BINARY_DIR}")
-add_executable(manager main.cpp ${CAPNP_SRCS})
-target_link_libraries(manager PRIVATE CapnProto::capnp-rpc cppzmq)
-target_include_directories(manager PRIVATE "${CMAKE_CURRENT_BINARY_DIR}")
+add_executable(subscriber sub.cpp ${CAPNP_SRCS})
+target_link_libraries(subscriber PRIVATE CapnProto::capnp-rpc cppzmq)
+target_include_directories(subscriber PRIVATE "${CMAKE_CURRENT_BINARY_DIR}")
 

@@ -12,7 +12,7 @@ int main() {
 
     uint32_t id = 0;
     while (true) {
-        ::capnp::MallocMessageBuilder message;
+        capnp::MallocMessageBuilder message;
         HelloWorld::Builder hello = message.initRoot<HelloWorld>();
         hello.setId(id++);
         hello.setMessage("Hello from Cap'n Proto!");
