@@ -170,7 +170,7 @@ int main(int argc, char *argv[]) {
     std::vector<std::thread> daemons;
     // Start multiple daemons as threads
     daemons.emplace_back(subscriber_daemon, &context, "tcp://localhost:5555");
-    //for (auto& t : daemons) t.create();
+    for (auto& t : daemons) t.detach();
     run_console();
     return 0;
 }
